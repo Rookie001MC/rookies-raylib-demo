@@ -2,6 +2,7 @@
 #define GLOBAL_H
 
 #include "raylib-cpp.hpp"
+#include "raygui.h"
 #include <vector>
 #include "filePath.h"
 #include "palette.h"
