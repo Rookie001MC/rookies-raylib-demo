@@ -45,4 +45,10 @@ if (${PLATFORM} STREQUAL "Web")
     set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ".html")
 endif()
 
+if (APPLE)
+    target_link_libraries(${PROJECT_NAME} PUBLIC "-framework IOKit")
+    target_link_libraries(${PROJECT_NAME} PUBLIC "-framework Cocoa")
+    target_link_libraries(${PROJECT_NAME} PUBLIC "-framework OpenGL")
+endif()
+
 # That's it! You should have an example executable that you can run. Have fun!
