@@ -1,25 +1,8 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.26)
 project(raylib_cpp_example)
 
 set(FETCHCONTENT_QUIET OFF)
 
-set(RAYLIB_CPP_VERSION 4.5.1)
-if (NOT raylib-cpp_FOUND)
-  include(FetchContent)
-  FetchContent_Declare(
-    raylib-cpp
-    DOWNLOAD_EXTRACT_TIMESTAMP ON
-    URL https://github.com/RobLoach/raylib-cpp/archive/refs/tags/v${RAYLIB_CPP_VERSION}.tar.gz
-  )
-  FetchContent_GetProperties(raylib-cpp)
-  if (NOT raylib-cpp_POPULATED)
-    set(FETCHCONTENT_QUIET NO)
-    FetchContent_Populate(raylib-cpp)
-    set(BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
-    set(BUILD_GAMES    OFF CACHE BOOL "" FORCE)
-    add_subdirectory(${raylib-cpp_SOURCE_DIR} ${raylib-cpp_BINARY_DIR})
-  endif()
-endif()
 
 set(RAYLIB_VERSION 4.5.0)
 if (NOT raylib_FOUND)

@@ -7,12 +7,12 @@ void resourceLoad(const std::string path)
 
 
     // Load fonts
-    ResourcesPath::displayRegularFont = loadFont(displayRegularFont, displayFontSize);
-    ResourcesPath::displayBoldFont = loadFont(displayBoldFont, displayFontSize);
+    ResourcesPath::displayRegularFont = loadFont(displayRegularFont, DISPLAY_FONT_SIZE);
+    ResourcesPath::displayBoldFont = loadFont(displayBoldFont, DISPLAY_FONT_SIZE);
 
-    ResourcesPath::wordRegularFont = loadFont(wordRegularFont, wordFontSize);
-    ResourcesPath::wordBoldFont = loadFont(wordBoldFont, wordFontSize);
-    ResourcesPath::wordItalicFont = loadFont(wordItalicFont, wordFontSize);
+    ResourcesPath::wordRegularFont = loadFont(wordRegularFont, WORD_FONT_SIZE);
+    ResourcesPath::wordBoldFont = loadFont(wordBoldFont, WORD_FONT_SIZE);
+    ResourcesPath::wordItalicFont = loadFont(wordItalicFont, WORD_FONT_SIZE);
 
     // Load images
     ResourcesPath::headerImage = LoadTexture(headerImage.c_str());    

@@ -7,7 +7,7 @@
 #include "filePath.h"
 #include "resources.h"
 #include "frontendInit.h"
-
+#include "style.h"
 #include "dictMain.h"
 struct ResourcesPath
 {

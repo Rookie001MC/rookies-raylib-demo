@@ -19,12 +19,10 @@ const std::string headerImage = imageDir + "header.png";
 // ---------------------
 const std::string displayRegularFont = fontDir + "FiraSans/FiraSans-Regular.ttf";
 const std::string displayBoldFont = fontDir + "FiraSans/FiraSans-Bold.ttf";
-const int displayFontSize = 40;
 
 const std::string wordRegularFont = fontDir + "PlayfairDisplay/PlayfairDisplay-Regular.ttf";
 const std::string wordBoldFont = fontDir + "PlayfairDisplay/PlayfairDisplay-Bold.ttf";
 const std::string wordItalicFont = fontDir + "PlayfairDisplay/PlayfairDisplay-Italic.ttf";
-const int wordFontSize = 30;
 // ---------------------
 
 // Loader function
