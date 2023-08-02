@@ -5,24 +5,22 @@ void resourceLoad(const std::string path)
     // path of the current executable
     std::string currentResource = (getCurrentExeDir(path)).string();
 
-    // Load resources
-    // ---------------------
-    // Images
-    // ---------------------
 
-    // raylib::Image header(currentResource + headerImage);
+    // Load fonts
+    ResourcesPath::displayRegularFont = loadFont(displayRegularFont, displayFontSize);
+    ResourcesPath::displayBoldFont = loadFont(displayBoldFont, displayFontSize);
 
-    // Fonts
-    // ---------------------
+    ResourcesPath::wordRegularFont = loadFont(wordRegularFont, wordFontSize);
+    ResourcesPath::wordBoldFont = loadFont(wordBoldFont, wordFontSize);
+    ResourcesPath::wordItalicFont = loadFont(wordItalicFont, wordFontSize);
 
-    raylib::Font displayRegular(currentResource + displayRegularFont, displayFontSize);
-    raylib::Font displayBold(currentResource + displayBoldFont, displayFontSize);
-
-    raylib::Font wordRegular(currentResource + wordRegularFont, wordFontSize);
-    raylib::Font wordBold(currentResource + wordBoldFont, wordFontSize);
-    raylib::Font wordItalic(currentResource + wordItalicFont, wordFontSize);
-
-    // ---------------------
-    // End of resources
-    // ---------------------
+    // Load images
+    ResourcesPath::headerImage = LoadTexture(headerImage.c_str());    
 }
+
+Font loadFont(const std::string path, const int fontSize)
+{
+    Font font = LoadFontEx(path.c_str(), fontSize, nullptr, 256);
+    return font;
+}
+

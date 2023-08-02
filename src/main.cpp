@@ -2,30 +2,32 @@
 
 std::string currentExeDir = "";
 
+bool running = true;
+
 int main(const int argc, const char* argv[])
 {
     currentExeDir = argv[0];
     // Initialization
     //--------------------------------------------------------------------------------------
-    const int screenWidth  = 1280;
-    const int screenHeight = 720;
-
-    raylib::Window window(screenWidth, screenHeight, "Outline Design - CS163 Dictionary");
-    SetTargetFPS(60);
+    InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "CS163 Dictionary Frontend");
     resourceLoad(currentExeDir);
+    setStyles();
+    SetTargetFPS(60);
 
-    // Main game loop
-    while (!window.ShouldClose()) // Detect window close button or ESC key
+    while(running)
     {
-        // Update
-        //----------------------------------------------------------------------------------
-
-        // Draw
-        //----------------------------------------------------------------------------------
-        BeginDrawing();
-        {
-        }
-        EndDrawing();
-        //----------------------------------------------------------------------------------
+        // Exit check
+        dictMain();
     }
+    
+    // De-Initialization
+    //--------------------------------------------------------------------------------------
+    UnloadTexture(ResourcesPath::headerImage);
+    UnloadFont(ResourcesPath::displayRegularFont);
+    UnloadFont(ResourcesPath::displayBoldFont);
+    UnloadFont(ResourcesPath::wordRegularFont);
+    UnloadFont(ResourcesPath::wordBoldFont);
+    UnloadFont(ResourcesPath::wordItalicFont);
+    CloseWindow();        // Close window and OpenGL context
+
 }

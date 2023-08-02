@@ -2,6 +2,7 @@
 #define RESOURCES_H
 
 #include <string>
+#include "raylib.h"
 
 
 /* Directories definition */
@@ -12,7 +13,7 @@ const std::string imageDir = staticDir + "img/";
 
 // Images
 // ---------------------
-const std::string headerImage = imageDir + "header.jpg";
+const std::string headerImage = imageDir + "header.png";
 
 // Fonts
 // ---------------------
@@ -28,5 +29,5 @@ const int wordFontSize = 30;
 
 // Loader function
 void resourceLoad(const std::string path);
-
+Font loadFont(const std::string path, const int fontSize);
 #endif

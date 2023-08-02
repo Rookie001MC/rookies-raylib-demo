@@ -69,7 +69,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
 add_executable(${PROJECT_NAME} ${SOURCES})
 set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 20)
 target_include_directories(${PROJECT_NAME} PUBLIC headers)
-target_link_libraries(${PROJECT_NAME} PUBLIC raylib raylib_cpp raygui)
+target_link_libraries(${PROJECT_NAME} PUBLIC raylib raygui)
 
 # Web Configurations
 if (${PLATFORM} STREQUAL "Web")

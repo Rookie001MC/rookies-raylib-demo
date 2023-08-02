@@ -89,3 +89,7 @@ _deps
 *.exe
 *.out
 *.app
+
+
+# Clangd cache
+.cache
